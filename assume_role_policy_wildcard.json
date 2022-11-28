@@ -1,0 +1,56 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Principal": {
+				"Service": [
+					"ec2.amazonaws.com",
+					"lambda.amazonaws.com",
+					"apigateway.amazonaws.com",
+					"athena.amazonaws.com",
+					"cloudformation.amazonaws.com",
+					"cloudfront.amazonaws.com",
+					"cloudtrail.amazonaws.com",
+					"codestar.amazonaws.com",
+					"cognito-identity.amazonaws.com",
+					"cognito-idp.amazonaws.com",
+					"config.amazonaws.com",
+					"datapipeline.amazonaws.com",
+					"datasync.amazonaws.com",
+					"directconnect.amazonaws.com",
+					"dynamodb.amazonaws.com",
+					"ec2.amazonaws.com",
+					"ecr.amazonaws.com",
+					"ecs.amazonaws.com",
+					"eks.amazonaws.com",
+					"elasticache.amazonaws.com",
+					"glue.amazonaws.com",
+					"guardduty.amazonaws.com",
+					"iam.amazonaws.com",
+					"kinesis.amazonaws.com",
+					"kms.amazonaws.com",
+					"lakeformation.amazonaws.com",
+					"lambda.amazonaws.com",
+					"lightsail.amazonaws.com",
+					"logs.amazonaws.com",
+					"macie.amazonaws.com",
+					"organizations.amazonaws.com",
+					"ram.amazonaws.com",
+					"rds.amazonaws.com",
+					"redshift.amazonaws.com",
+					"route53.amazonaws.com",
+					"s3.amazonaws.com",
+					"sagemaker.amazonaws.com",
+					"secretsmanager.amazonaws.com",
+					"sns.amazonaws.com",
+					"sqs.amazonaws.com",
+					"ssm.amazonaws.com"
+				]
+			},
+			"Action": [
+				"sts:*"
+			]
+		}
+	]
+}
